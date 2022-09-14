@@ -9,7 +9,7 @@ link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
 class TestLesson3():
   def test_find_button(self, browser):
     browser.get(link)
-    time.sleep(10)
+    time.sleep(30)
     btn = WebDriverWait(browser, 10).until(
         expected_conditions.presence_of_element_located((By.CLASS_NAME, "btn-add-to-basket")))
     assert btn, 'basket button not found'
